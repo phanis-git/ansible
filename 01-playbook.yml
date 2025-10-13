@@ -5,6 +5,6 @@
   hosts: frontend # To which server we are connecting , it will check inventory.ini file
   # As we know tasks are like list of tasks/collections/modules
   tasks:
-  - name: Ping
+  - name: ping
     ansible.builtin.ping
-      # data: "Hi DevOps Phani ansible playbook is responding"
+      data: "Hi DevOps Phani ansible playbook is responding"
