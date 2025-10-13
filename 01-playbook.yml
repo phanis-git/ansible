@@ -6,5 +6,5 @@
   # As we know tasks are like list of tasks/collections/modules
   tasks:
   - name: ping
-    ansible.builtin.ping
+    ansible.builtin.ping:
       data: "Hi DevOps Phani ansible playbook is responding"
