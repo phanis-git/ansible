@@ -1,0 +1,14 @@
+---
+- name: "Installing and Starting Nginx"
+  hosts: frontend
+  become: Yes
+  tasks:
+    - name: "Install nginx"
+      ansible.builtin.package:
+        name: nginx
+        state: present
+    - name: "Start nginx"
+      ansible.builtin.service:
+        name: nginx
+        state: started   # its like systemctl start nginx
+        enabled: yes     # its like systemctl enable nginx

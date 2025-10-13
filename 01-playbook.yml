@@ -8,3 +8,11 @@
   - name: "Ping"
     ansible.builtin.ping:
       data: "Hi DevOps Phani ansible playbook is responding"
+
+
+
+
+
+
+      # Command that to run this script is in below
+      # ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 01-playbook.yml
