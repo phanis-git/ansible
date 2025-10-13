@@ -1,0 +1,15 @@
+- name: "DevOps Phani"
+  age: 25
+  dob: "10-12-1999"
+  addresses: 
+    - doorNo: "1-2-3/4a"
+      street: "Xyz street"
+      type: "Current address"
+    - doorNo: "9-8-7/6b"
+      street: "Abc street"
+      type: "Permanent address"
+  skills:
+    - DevSecOps
+    - Frontend
+    - Java
+    - Sql
