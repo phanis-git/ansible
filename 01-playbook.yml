@@ -4,4 +4,4 @@
   tasks:
   - name: "Ping"
     ansible.builtin.ping
-      data: "Hi DevOps Phani ansible playbook is responding"
+      # data: "Hi DevOps Phani ansible playbook is responding"
