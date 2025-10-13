@@ -8,7 +8,7 @@
 #   - name: "Ping"
 #     ansible.builtin.ping
 #       data: "Hi DevOps Phani ansible playbook is responding"
-
+---
 - name: "ping the server"
   hosts: frontend # Which server you are connecting to
   # List of tasks/collections/modules
