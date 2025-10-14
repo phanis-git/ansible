@@ -1,0 +1,8 @@
+---
+- name: "Variables and its values from arguments"
+  hosts: local
+  connection: local
+  tasks:
+    - name: "Printing the values from cli"
+      ansible.builtin.debug:
+        msg: "{{ name }} , {{ age }}"
