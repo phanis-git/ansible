@@ -1,0 +1,22 @@
+---
+- name: "Ansible practice playbook"
+  hosts: frontend
+  tasks:
+    - name: "Ping test"
+      ansible.builtin.ping:
+    - name: "Print custom message"
+      ansible.builtin.debug:
+        msg: "Hi DevOps Phani! Ansible playbook is responding ✅"
+
+- name: "Install nginx"
+  hosts: frontend
+  become: yes
+  tasks: 
+    - name: "Install nginx"
+      ansible.builtin.package:
+      name: nginx
+      state: present
+    - name: "Start nginx"
+      ansible.builtin.service:
+      state: started   # its like systemctl start nginx
+      enabled: yes 

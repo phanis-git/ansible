@@ -1,7 +1,7 @@
 ---
 - name: "Installing and Starting Nginx"
   hosts: frontend
-  become: Yes
+  become: Yes  # become sudo  like in command we given -b
   tasks:
     - name: "Install nginx"
       ansible.builtin.package:
