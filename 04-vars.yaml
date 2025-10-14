@@ -7,6 +7,8 @@
   vars:               # vars is the syntax of variables within that we can declare and initilise the variables
     COURSE_NAME: "Ansible"
     TRAINER_NAME: "Siva"
+  vars_files:
+    - details.yaml
   tasks:
   - name: "Printing the variables"
     ansible.builtin.debug:    # debug is like echo , it prints the msg 
@@ -23,8 +25,6 @@
   
   # Getting variables from other files
   - name: "Accessing variables from other files"
-    vars_files:
-      - details.yaml
     ansible.builtin.debug:
       msg: "Accessing variables from other files ::-> My name is {{ NAME }} and my role is {{ DESIGNATION }}"
 
