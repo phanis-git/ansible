@@ -1,0 +1,12 @@
+---
+- name: "Play level variables"
+  hosts: local
+  connection: local  # here local means ansible is connecting to localhost , it means where ansible is installed 
+                      # there only , not to any other servers
+  vars:               # vars is the syntax of variables within that we can declare and initilise the variables
+    COURSE_NAME: "Ansible"
+    TRAINER_NAME: "Siva"
+  tasks:
+  - name: "Printing the variables"
+    ansible.builtin.debug:    # debug is like echo , it prints the msg 
+      msg: "Course name is :{{ COURSE_NAME }} and the trainer is {{ TRAINER_NAME }}"
