@@ -1,0 +1,15 @@
+---
+- name: "Securing variables"
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: username
+      prompt: "Enter your username"
+      private: false
+    - name: password
+      prompt: "Enter your password"
+      private: true
+  tasks:
+    - name: "Your Username and Password are"
+      ansible.builtin.debug:
+      msg: "Username :: {{ username }} and Password :: {{ password }}" 
