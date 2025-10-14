@@ -17,7 +17,6 @@
       NAME: "DevOps Phani"
       ROLE: "DevOps Engineer"
     ansible.builtin.debug:
-      msg: "Printing task level variables"
-      msg: "My name is {{ NAME }} and i am working as {{ ROLE }}"
+      msg: "Printing task level variables ::-> My name is {{ NAME }} and i am working as {{ ROLE }}"
   
 
