@@ -1,0 +1,11 @@
+---
+- name: "Loops"
+  hosts: local
+  connection: local
+  tasks:
+    - name: "Looping the values"
+      ansible.builtin.debug:
+        msg: "The values are :: {{ item }}"
+      loop:
+        - "Phani"
+        - "Kiran"
