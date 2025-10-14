@@ -1,4 +1,5 @@
 ---
+# These are Play level variables , because we kept the variable at top of playbook
 - name: "Play level variables"
   hosts: local
   connection: local  # here local means ansible is connecting to localhost , it means where ansible is installed 
@@ -9,4 +10,14 @@
   tasks:
   - name: "Printing the variables"
     ansible.builtin.debug:    # debug is like echo , it prints the msg 
-      msg: "Course name is :{{ COURSE_NAME }} and the trainer is {{ TRAINER_NAME }}"
+      msg: "Course name is :{{ COURSE_NAME }} and the trainer is {{ TRAINER_NAME }}"    
+  # Task level variables
+  - name: "Task level variables"
+    vars:
+      NAME: "DevOps Phani"
+      ROLE: "DevOps Engineer"
+    ansible.builtin.debug:
+      msg: "Printing task level variables"
+      msg: "My name is {{ NAME }} and i am working as {{ ROLE }}"
+  
+
