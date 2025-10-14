@@ -1,0 +1,8 @@
+---
+- name: "Inventory variables"
+  hosts: local
+  connection: local
+  tasks:
+    - name: "Using inventory variables and printing them here"
+      ansible.builtin.debug:
+        msg: "The name of the student is :: {{ STUDENT_NAME }} and his rollno is :: {{ STUDENT_ROLL_NO }}"
