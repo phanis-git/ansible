@@ -10,7 +10,7 @@
   tasks:
   - name: "Printing the variables"
     ansible.builtin.debug:    # debug is like echo , it prints the msg 
-      msg: "Course name is :{{ COURSE_NAME }} and the trainer is {{ TRAINER_NAME }}"    
+      msg: "Course name is :{{ COURSE_NAME }} and the trainer is {{ TRAINER_NAME }} and my name is {{ NAME }}"    
   # Task level variables
   - name: "Task level variables"
     vars:
