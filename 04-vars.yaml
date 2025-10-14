@@ -10,7 +10,8 @@
   tasks:
   - name: "Printing the variables"
     ansible.builtin.debug:    # debug is like echo , it prints the msg 
-      msg: "Course name is :{{ COURSE_NAME }} and the trainer is {{ TRAINER_NAME }} and my name is {{ NAME }}"    
+      msg: "Course name is :{{ COURSE_NAME }} and the trainer is {{ TRAINER_NAME }}"    
+
   # Task level variables
   - name: "Task level variables"
     vars:
@@ -18,5 +19,14 @@
       ROLE: "DevOps Engineer"
     ansible.builtin.debug:
       msg: "Printing task level variables ::-> My name is {{ NAME }} and i am working as {{ ROLE }}"
+
+  
+  # Getting variables from other files
+  - name: "Accessing variables from other files"
+    vars_files:
+      - details.yaml
+    ansible.builtin.debug:
+      msg: "Accessing variables from other files ::-> My name is {{ NAME }} and my role is {{ DESIGNATION }}"
+
   
 
