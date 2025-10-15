@@ -25,7 +25,9 @@
     - name: "Transforming List to Object or map or Dictionary"
       vars:
         information:
-        - "Siva"
-        - 25
+        - key: "Name"
+          value: "Phani"
+        - key: "Age"
+          value: 25
       ansible.builtin.debug:
         msg: "Object to List: {{ information | items2dict }}"
