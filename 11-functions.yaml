@@ -21,3 +21,11 @@
           age: 25
       ansible.builtin.debug:
         msg: "Object to List: {{ details | dict2items }}"
+
+    - name: "Transforming List to Object or map or Dictionary"
+      vars:
+        information:
+        - name: "Siva"
+        - age: 25
+      ansible.builtin.debug:
+        msg: "Object to List: {{ information | items2Dict }}"
