@@ -28,4 +28,4 @@
         - name: "Siva"
         - age: 25
       ansible.builtin.debug:
-        msg: "Object to List: {{ information | items2Dict }}"
+        msg: "Object to List: {{ information | items2dict }}"
