@@ -1,0 +1,9 @@
+---
+- name: "Funtions in Ansible"
+  hosts: local
+  connection: local
+  tasks:
+    - name: "Default function"
+      ansible.builtin.debug:
+        # default () function
+        msg: "The student name is {{ STUDENT_NM | default('DevOps Phani') }}"
