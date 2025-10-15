@@ -7,9 +7,17 @@
       ansible.builtin.debug:
         # default () function
         msg: "The student name is {{ STUDENT_NM | default('DevOps Phani') }}"
-
+        # Transforming String to List
     - name: "Transforming String to List"
       vars: 
         persons: "Phani , Siva , Kumar"
       ansible.builtin.debug:
         msg: "List of persons :: {{ persons | split(',') }}"
+
+    - name: "Transforming Object or map or Dictionary to List"
+      vars:
+        details:
+          name: "Kranthi"
+          age: 25
+      ansible.builtin.debug:
+        msg: "Object to List: {{ details | dict2items }}"
