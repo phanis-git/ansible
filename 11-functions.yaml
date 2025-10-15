@@ -10,6 +10,6 @@
 
     - name: "Transforming String to List"
       vars: 
-      persons: "Phani , Siva , Kumar"
+        persons: "Phani , Siva , Kumar"
       ansible.builtin.debug:
         msg: "List of persons :: {{ persons | split(',') }}"
