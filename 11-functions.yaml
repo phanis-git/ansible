@@ -45,6 +45,6 @@
 
     - name: "Checking Ip addresses is correct or not"
       vars:
-        sampleIp: "192.178.2.1999"
+        sampleIp: "192.178.2.19"
       ansible.builtin.debug:
         msg: "{{ sampleIp | ansible.utils.ipv4 }}"
