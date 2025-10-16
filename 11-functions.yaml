@@ -42,3 +42,9 @@
       ansible.builtin.copy:
         dest: sample-json
         content: "{{ sampleYaml | to_nice_json }}"
+
+    - name: "Checking Ip addresses is correct or not"
+      vars:
+        sampleIp: "192.178.2.1999"
+      ansible.builtin.debug:
+        msg: "{{ sampleIp | ansible.utils.ipv4 }}"
