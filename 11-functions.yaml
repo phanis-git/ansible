@@ -38,3 +38,7 @@
     - name: "Yaml to Json human readable format"
       ansible.builtin.debug:
         msg: "{{ sampleYaml | to_nice_json }}" 
+    - name: "Saving json data into a file"
+      ansible.builtin.copy:
+        dest: sample-json
+        content: "{{ sampleYaml | to_nice_json }}"
