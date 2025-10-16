@@ -34,7 +34,7 @@
 
     - name: "Reading Yaml file and giving that response to a variable and converting it into json human readable format"
       ansible.builtin.set_fact:
-        yaml-syntax.yaml: "{{ lookup('file','yaml-syntax.yml') | from_yaml }}"
+        sampleYaml: "{{ lookup('file','yaml-syntax.yml') | from_yaml }}"
     - name: "Yaml to Json human readable format"
       ansible.builtin.debug:
-        msg: "{{ yaml-syntax.yaml | to_nice_json }}" 
+        msg: "{{ sampleYaml | to_nice_json }}" 
