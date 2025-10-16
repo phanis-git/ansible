@@ -33,7 +33,7 @@
         msg: "Object to List: {{ information | items2dict }}"
 
     - name: "Reading Yaml file and giving that response to a variable and converting it into json human readable format"
-      ansible.builtin.set_facts:
+      ansible.builtin.set_fact:
         yaml-syntax.yaml: "{{ lookup('file','yaml-syntax.yml') | from_yaml }}"
     - name: "Yaml to Json human readable format"
       ansible.builtin.debug:
